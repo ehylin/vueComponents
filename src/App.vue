@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Vue.js App" :personajes="personajes" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+  data: () => ({
+    personajes: [
+      {
+        nombre: "Rick Sanchez",
+        src: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      },
+      {
+        nombre: "Morty Smith",
+        src: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      },
+      {
+        nombre: "Rick Sanchez",
+        src: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      },
+      {
+        nombre: "Morty Smith",
+        src: "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      },
+    ],
+  }),
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-image: url("../public/bg-component.png");
+  margin: 0;
 }
 </style>
